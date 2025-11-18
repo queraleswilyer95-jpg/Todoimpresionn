@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 1.1px;
+  
+}
+
+body {
+  background-image: url(imagenes/fondoDragon.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.envoltura {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(25deg, #0c0388, #031ae7a2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.encabezado-sup {
+  height: 100%;
+  max-width: 1440px;
+  flex-grow: 1;
+  margin-inline: auto;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 40px;
+  white-space: nowrap;
+}
+
+.menu {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 101;
+  cursor: pointer;
+  display: none;
+  margin-left: 20px;
+}
+
+.menu img {
+  height: 100%;
+}
+
+.Nombre-empresa {
+  color: white;
+}
+
+/* ======= CONTENIDO ======= */
+
+.lista-servicios {
+  display: grid;
+  gap: 30px;
+  padding: 0 40px 60px;
+}
+
+.servicio {
+  background: #032a66;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.servicio p {
+  text-align: justify;
+}
+.servicio ul {
+  text-align: justify;
+}
+
+/* ==== IMAGEN + TEXTO ==== */
+.principal,
+.servicios,
+.contacto,
+.acerca,
+.pie {
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.principal img,
+.servicios img,
+.contacto img,
+.acerca img,
+.pie img {
+  width: 800px;
+  height: auto;
+  margin-bottom: 50px;
+  margin-right: 10px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: #00198a;
+  padding: 30px;
+  box-shadow: 0 0 30px rgb(0, 247, 255);
+  opacity: 0.9;
+  text-align: center;
+}
+
+.social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: #4b4c4d;
+}
+
+.social a {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.social a:hover {
+  background-color: #00fff2;
+}
+
+.copy {
+  font-size: 20px;
+  color: white;
+}
+
+/* ==== IMAGEN CABECERA ==== */
+.imgheader {
+  width: 1200px;
+  height: 80px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .imgheader {
+    height: 70px;
+  }
+}
+
+.txtheader {
+  font-size: 20px;
+}
+@media screen and (max-width: 1280px) {
+  .secciones {
+    display: flex none;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .nav-bar a {
+    font-size: 20px;
+  }
+  
+}
+@media screen and (max-width: 1250px) {
+  .nav-bar a {
+    font-size: 15px;
+  }
+  
+}
+@media screen and (max-width: 1090px) {
+  .nav-bar a {
+    font-size: 12px;
+  }
+  .Nombre-empresa{
+    font-size: 11px;
+  }
+}
+
+/* ==== RESPONSIVO ==== */
+@media screen and (max-width: 950px) {
+
+  .menu {
+    display: flex;
+  }
+
+  .nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(350deg, transparent, rgb(6, 76, 216), rgb(7, 6, 87));
+    padding-top: 120px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    transform: translateX(100%);
+    transition: 0.5s;
+    padding-right: 40px;
+    z-index: 100;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+   .nav-bar a {
+    font-size: 20px;
+  }
+  .logo-link {
+    margin-left: 10px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+  .Nombre-empresa{
+    font-size: 18px;
+  }
+}
+
+
+  /* Aquí se hace responsivo lo necesario */
+  .principal,
+  .servicios,
+  .contacto,
+  .acerca,
+  .pie {
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .principal img,
+  .servicios img,
+  .contacto img,
+  .acerca img,
+  .pie img {
+    width: 100%;
+    max-width: 500px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .servicio p,
+  .servicio ul {
+    font-size: 16px;
+  }
+
+
+.acerca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  
+}
+
+.acerca, .imagenes-acerca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.acerca .imagenes-acerca img {
+  width: 45%;
+  max-width: 600px;
+  height: auto;
+  
+}
+
+@media screen and (max-width:280px){
+
+  
+   .Nombre-empresa{
+  font-size: 7px;
+}
+.menu img{
+  height: 30px;
+  padding-top: 10px;
+}
+}
+
+@media screen and (max-width:330px){
+
+ 
+   .Nombre-empresa{
+  font-size: 9px;
+}
+.menu img{
+  height: 35px;
+  padding-top: 10px;
+}
+}
+@media screen and (max-width:380px){
+
+ 
+   .Nombre-empresa{
+  font-size: 12px;
+}
+.menu img{
+  height: 40px;
+  
+}
+}
+
+

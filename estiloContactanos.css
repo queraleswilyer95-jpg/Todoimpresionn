@@ -1,0 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 1.1px;
+}
+
+body {
+  background-image: url(imagenes/fondoDragon.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  /* mantiene el fondo fijo al hacer scroll */
+
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+}
+
+.envoltura {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(25deg, #0c0388, #031ae7a2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+  /* efecto sutil al pasar el cursor */
+}
+
+.encabezado-sup {
+  height: 100%;
+  max-width: 1440px;
+  flex-grow: 1;
+  margin-inline: auto;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 40px;
+}
+
+.menu {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 101;
+  cursor: pointer;
+  display: none;
+  margin-left: 20px;
+}
+
+.menu img {
+  height: 100%;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+
+.box-info h1 {
+  font-size: 36px;
+  color: #032a66;
+  letter-spacing: 2px;
+}
+
+.datos p {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 15px;
+  /* separa cada línea */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* espacio entre ícono y texto */
+}
+
+.datos i {
+  color: #032a66;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.links a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background: #032a66;
+  text-align: center;
+  border-radius: 50%;
+ 
+}
+
+.links a i {
+  color: #ffffff;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.formulario-contacto {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  color: #032a66;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.input-box i {
+  color: #032a66;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.input-box input,
+.input-box textarea {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #000000;
+  resize: none;
+}
+
+.input-box textarea {
+  height: 100px;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: #555;
+}
+
+.formulario-contacto button {
+  padding: 12px;
+  background: #032a66;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background: #064cd8;
+  
+}
+@media screen and (max-width: 1440px) {
+  .nav-bar a {
+    font-size: 20px;
+  }
+  
+}
+@media screen and (max-width: 1250px) {
+  .nav-bar a {
+    font-size: 15px;
+  }
+  
+}
+@media screen and (max-width: 1090px) {
+  .nav-bar a {
+    font-size: 12px;
+  }
+  .Nombre-empresa{
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .menu {
+    display: flex;
+  }
+
+  .nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(350deg,
+        transparent,
+        rgb(6, 76, 216),
+        rgb(7, 6, 87));
+    padding-top: 120px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    transform: translateX(100%);
+    transition: 0.5s;
+    padding-right: 40px;
+    z-index: 100;
+  }
+
+  .nav-bar a {
+    font-size: 20px;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+   .logo-link {
+    margin-left: 10px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+  .Nombre-empresa{
+    font-size: 18px;
+  }
+  
+@media screen and (max-width: 768px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .box-info {
+    text-align: center;
+    gap: 20px;
+  }
+
+  .box-info h1 {
+    font-size: 24px;
+  }
+
+  .datos p {
+    font-size: 16px;
+  }
+
+  .formulario-contacto h2 {
+    font-size: 22px;
+  }
+
+  .input-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .input-box i {
+    margin-bottom: 5px;
+  }
+
+  .input-box input,
+  .input-box textarea {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .formulario-contacto button {
+    font-size: 15px;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+  .links a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .links a i {
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  .logo-link {
+    margin-left: 10px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+}
+}
+
+.Nombre-empresa{
+  color: white;
+}
+
+footer{
+  background-color: #00198a;
+  padding: 30px ;
+  box-shadow: 0 0 30px rgb(0, 247, 255);
+  opacity: 0.9;
+  text-align: center;
+
+}
+
+ .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: #4b4c4d;
+}
+
+.social a{
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all .5s ease;
+
+}
+
+.social a:hover {
+  background-color: #00fff2 ;
+}
+
+@media (max-width:991px){
+  .footer{
+    text-align: center;
+    }
+    .social{
+      width:100% ;
+    margin-bottom: 30px;}
+}
+.copy{
+  font-size: 20px;
+  color: white;
+}
+
+.nav-bar a:hover {
+  color: #00fff2;
+}
+
+@media screen and (max-width:280px){
+
+  
+   .Nombre-empresa{
+  font-size: 7px;
+}
+.menu img{
+  height: 30px;
+  padding-top: 10px;
+}
+}
+
+@media screen and (max-width:330px){
+
+ 
+   .Nombre-empresa{
+  font-size: 9px;
+}
+.menu img{
+  height: 35px;
+  padding-top: 10px;
+}
+}
+@media screen and (max-width:380px){
+
+ 
+   .Nombre-empresa{
+  font-size: 12px;
+}
+.menu img{
+  height: 40px;
+  
+}
+}
+

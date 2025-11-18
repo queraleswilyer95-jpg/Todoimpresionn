@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 1.1px;
+}
+
+body {
+  background-image: url(imagenes/fondoDragon.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;        /* mantiene el fondo fijo al hacer scroll */
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+.envoltura {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(25deg, #0c0388, #031ae7a2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2); /* efecto sutil al pasar el cursor */
+}
+
+.encabezado-sup {
+  height: 100%;
+  max-width: 1440px;
+  flex-grow: 1;
+  margin-inline: auto;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 40px;
+  white-space: nowrap;
+}
+
+.menu {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 101;
+  cursor: pointer;
+  display: none;
+  margin-left: 20px;
+}
+
+.menu img {
+  height: 100%;
+}
+@media screen and (max-width: 1440px) {
+  .nav-bar a {
+    font-size: 20px;
+  }
+  
+}
+@media screen and (max-width: 1250px) {
+  .nav-bar a {
+    font-size: 15px;
+  }
+  
+}
+@media screen and (max-width: 1090px) {
+  .nav-bar a {
+    font-size: 12px;
+  }
+  .Nombre-empresa{
+    font-size: 11px;
+  }
+}
+
+
+
+@media screen and (max-width: 950px) {
+  .menu {
+    display: flex;
+  }
+  
+  .nav-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(350deg, transparent, rgb(6, 76, 216), rgb(7, 6, 87));
+    padding-top: 120px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    transform: translateX(100%);
+    transition: 0.5s;
+    padding-right: 40px;
+    z-index: 100;
+  }
+
+  .nav-bar a {
+    font-size: 20px;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+
+  .lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 30px;
+    padding: 0 20px 40px;
+  }
+
+  .decorativas {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .titulo-servicios h1 {
+    font-size: 25px;
+  }
+
+  .titulo-servicios h3 {
+    font-size: 16px;
+  }
+  
+
+  body {
+    background-position: center top; /* desplaza hacia arriba */
+  }
+  .servicio {
+   width: 100%;
+  overflow: hidden;
+}
+
+ .logo-link {
+    margin-left: 10px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+  .Nombre-empresa{
+    font-size: 18px;
+  }
+
+.servicio h2 {
+  font-size: 12px ;
+  text-align: center;
+  white-space: normal; /* permite saltos de línea */
+  overflow-wrap: break-word; /* permite dividir si es necesario */
+}
+
+}
+
+.titulo-servicios {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.titulo-servicios h3 {
+  font-size: 40px;
+  color: #333;
+}
+
+.titulo-servicios h1 {
+  font-size: 68px;
+  color: #064cd8;
+  text-transform: uppercase;
+}
+
+.decorativas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* permite que se acomoden sin romper diseño */
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.decorativas img {
+  max-width: 30%;
+  height: auto;
+  flex: 1 1 200px;
+  object-fit: contain;
+}
+
+
+.lista-servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 30px;
+  padding: 0 40px 60px;
+}
+
+
+.servicio {
+  background: #032a66; /* azul oscuro */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+
+.servicio img {
+  width: 100%;
+  height: 200px; /* altura uniforme para todas */
+  object-fit: cover; /* recorta y ajusta sin deformar */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.servicio h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.servicio button {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.servicio button:hover {
+  background: #dddddd;
+}
+
+/* Modal para ampliar imagen */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Nombre-empresa{
+  color: white;
+}
+
+footer{
+  background-color: #00198a;
+  padding: 30px ;
+  box-shadow: 0 0 30px rgb(0, 247, 255);
+  opacity: 0.9;
+  text-align: center;
+}
+
+ .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: #4b4c4d;
+}
+
+.social a{
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all .5s ease;
+
+}
+
+.social a:hover {
+  background-color: #00fff2 ;
+}
+
+@media (max-width:991px){
+  .footer{
+    text-align: center;
+    }
+    .social{
+      width:100% ;
+    margin-bottom: 30px;}
+}
+
+.copy{
+  font-size: 20px;
+  color: white;
+}
+
+.nav-bar a:hover {
+  color: #00fff2;
+}
+
+@media screen and (max-width:525px) {
+
+  .servicio h2{
+    font-size: 16px;
+  }
+  .servicio button{
+    font-size: 14px;
+  }
+  
+}
+
+@media screen and (max-width:440px) {
+
+  .servicio h2{
+    font-size: 9px;
+  }
+  .servicio button{
+    font-size: 11px;
+  }
+
+  .lista-servicios {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 sola columnas */
+  
+}
+
+
+.titulo-servicios h3{
+  font-size: 36px;
+}
+.titulo-servicios h1{
+  font-size: 56px;
+}
+ 
+}
+
+@media screen and (max-width:330px){
+
+  .titulo-servicios h3{
+    font-size: 26px;
+  }
+   .titulo-servicios h1{
+    font-size: 46px;
+   }
+   .Nombre-empresa{
+  font-size: 11px;
+}
+.menu img{
+  height: 35px;
+  padding-top: 10px;
+}
+
+}
+
+@media screen and (max-width:280px){
+
+  
+   .Nombre-empresa{
+  font-size: 7px;
+}
+.menu img{
+  height: 30px;
+  padding-top: 10px;
+}
+}
+@media screen and (max-width:380px){
+
+ 
+   .Nombre-empresa{
+  font-size: 12px;
+}
+.menu img{
+  height: 40px;
+  
+}
+}
+
+
+
+
+
+
+  
+
+
+
+
+
+
